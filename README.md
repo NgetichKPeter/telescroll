@@ -2,7 +2,7 @@
 
 > **Every Script Tells a Story.**
 
-Telescroll is a modern social platform where people, known as **Scribes**, write and share **Scripts**. Inspired by the feeling of ancient archives and handwritten manuscripts, Telescroll combines a unique visual identity with modern social networking features.
+Telescroll is a modern social media platform where people, known as **Scribes**, create and share **Scripts**. Inspired by the elegance of ancient manuscripts and archives, Telescroll offers a unique experience for sharing ideas, stories, and conversations.
 
 ---
 
@@ -10,53 +10,47 @@ Telescroll is a modern social platform where people, known as **Scribes**, write
 
 - 🔐 Secure Authentication
 - 👤 Scribe Profiles
-- 📜 Write & Share Scripts
-- ❤️ Seal Scripts
-- 💬 Annotate Scripts
-- 📤 Pass Along Scripts
-- 🪙 Gold Coin Tipping
-- 👥 Readers & Following
+- 📜 Create and Share Scripts
+- ❤️ Like Scripts
+- 💬 Comment on Scripts
+- 📤 Share Scripts
+- 🪙 Bestow Gold (Gold Coin Tipping)
+- 👥 Followers & Following
 - 🔔 Notifications
-- ✉️ Scroll Mail (Messaging)
-- 🔍 Explore Scripts & Scribes
+- 💌 Messages
+- 🔍 Explore
 - 💾 Save Scripts
-- 🌙 Dark Mode
-- 📱 Progressive Web App (PWA)
+- ⚙️ Account Settings
+- 🌙 Dark Mode (Coming Soon)
+- 📱 Progressive Web App (Coming Soon)
 
 ---
 
-## 📖 Telescroll Terminology
+## 📖 Terminology
 
-| Common Name | Telescroll |
-|-------------|------------|
-| User | Scribe |
-| Post | Script |
-| Feed | Archive |
-| Like | Seal |
-| Comment | Annotation |
-| Share | Pass Along |
-| Tip | Bestow Gold |
-| Coins | Gold Coins |
-| Followers | Readers |
-| Following | Following Scribes |
-| Messages | Scroll Mail |
-| Joined | Scribing Since |
+| Standard | Telescroll |
+|----------|------------|
+| User | **Scribe** |
+| Post | **Script** |
+| Tip | **Bestow Gold** |
+| Coins | **Gold Coins** |
+| Joined | **Scribing Since** |
 
 ---
 
-## 🛠 Technology Stack
+## 🛠 Tech Stack
 
 - HTML5
 - CSS3
-- JavaScript (ES Modules)
+- JavaScript (ES6+)
 - Supabase
 - PostgreSQL
-- Netlify
 - GitHub
+- Netlify
 
 ---
 
-## 📂 Project Structure
+## 📁 Project Structure
 
 ```
 telescroll/
@@ -78,39 +72,39 @@ telescroll/
 
 ---
 
-## 🚀 Roadmap
+## 🎯 Roadmap
 
 ### Phase 1
 - Project Setup
 - Authentication
-- Archive
+- Home Feed
 - Scribe Profiles
 
 ### Phase 2
 - Scripts
-- Seals
-- Annotations
-- Pass Along
+- Likes
+- Comments
+- Shares
 
 ### Phase 3
-- Gold Coins
+- Gold Coin Tipping
 - Wallet
-- Readers & Following
+- Followers & Following
 
 ### Phase 4
-- Scroll Mail
+- Messages
 - Notifications
 - Explore
 
 ### Phase 5
-- PWA
 - Admin Dashboard
 - Verification
+- Progressive Web App
 - Public Launch
 
 ---
 
-## 🎨 Design Language
+## 🎨 Design
 
 Telescroll is inspired by:
 
@@ -118,18 +112,26 @@ Telescroll is inspired by:
 - 🪶 Ink and parchment
 - 🔴 Wax seals
 - 🪙 Gold accents
-- 📚 Historic archives
+- 📚 Timeless archives
+
+The design combines a classic aesthetic with a modern, fast, and responsive experience.
+
+---
+
+## 🤝 Contributing
+
+Contributions, suggestions, and feedback are welcome. Feel free to open an issue or submit a pull request.
 
 ---
 
 ## 📄 License
 
-MIT License
+This project is licensed under the MIT License.
 
 ---
 
-## 👨‍💻 Developer
+## 👨‍💻 Creator
 
-Created and maintained by **Ngetich K Peter**.
+**Ngetich K Peter**
 
 Building a place where every Script tells a story.
