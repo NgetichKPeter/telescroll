@@ -60,6 +60,7 @@ main {
     max-width: var(--max-width);
     margin: 0 auto;
     padding: var(--space-lg);
+    padding-bottom: calc(var(--bottom-nav-height) + var(--space-xl));
 }
 
 .hidden {
