@@ -1,1 +1,75 @@
-o
+/* ==========================================
+   Telescroll Design System
+   Version: 1.0
+========================================== */
+
+:root {
+
+    /* Brand Colors */
+    --parchment: #EDE3CC;
+    --paper: #FFFFFF;
+    --ink: #2B2018;
+    --soft-ink: #5C4A38;
+
+    --burgundy: #7A2E2E;
+    --burgundy-dark: #5E2222;
+    --gold: #A6813C;
+
+    /* UI Colors */
+    --border: #E4DFD3;
+    --shadow: rgba(0, 0, 0, 0.08);
+
+    --success: #2E8B57;
+    --warning: #D4A017;
+    --danger: #B22222;
+    --info: #3A6EA5;
+
+    /* Typography */
+    --font-heading: "Cinzel", serif;
+    --font-body: "Inter", sans-serif;
+
+    /* Font Sizes */
+    --text-xs: 12px;
+    --text-sm: 14px;
+    --text-md: 16px;
+    --text-lg: 18px;
+    --text-xl: 22px;
+    --text-2xl: 28px;
+    --text-3xl: 36px;
+
+    /* Font Weights */
+    --weight-normal: 400;
+    --weight-medium: 500;
+    --weight-bold: 700;
+
+    /* Spacing */
+    --space-xs: 4px;
+    --space-sm: 8px;
+    --space-md: 16px;
+    --space-lg: 24px;
+    --space-xl: 32px;
+    --space-2xl: 48px;
+
+    /* Border Radius */
+    --radius-sm: 6px;
+    --radius-md: 12px;
+    --radius-lg: 18px;
+    --radius-xl: 24px;
+    --radius-full: 999px;
+
+    /* Shadows */
+    --shadow-sm: 0 2px 6px var(--shadow);
+    --shadow-md: 0 6px 18px var(--shadow);
+    --shadow-lg: 0 12px 30px var(--shadow);
+
+    /* Animation */
+    --transition-fast: 0.2s ease;
+    --transition-normal: 0.3s ease;
+    --transition-slow: 0.5s ease;
+
+    /* Layout */
+    --header-height: 64px;
+    --bottom-nav-height: 70px;
+    --max-width: 680px;
+
+}
