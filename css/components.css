@@ -218,3 +218,56 @@ nav a.active {
     color:var(--burgundy);
     font-weight:var(--weight-bold);
 }
+/* Script Card */
+
+.script-card{
+    display:flex;
+    flex-direction:column;
+    gap:16px;
+}
+
+.script-header{
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+
+.avatar{
+    width:50px;
+    height:50px;
+    border-radius:50%;
+    object-fit:cover;
+    background:var(--border);
+}
+
+.script-header h3{
+    font-size:var(--text-md);
+}
+
+.script-header small{
+    color:var(--soft-ink);
+}
+
+.script-content{
+    font-size:var(--text-md);
+    line-height:1.6;
+}
+
+.script-actions{
+    display:flex;
+    justify-content:space-between;
+    gap:8px;
+    flex-wrap:wrap;
+}
+
+.script-actions button{
+    padding:8px 12px;
+    border-radius:var(--radius-full);
+    background:var(--parchment);
+    transition:var(--transition-fast);
+}
+
+.script-actions button:hover{
+    background:var(--gold);
+    color:#fff;
+}
