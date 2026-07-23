@@ -107,3 +107,32 @@ nav a.active {
     color: var(--burgundy);
     font-weight: var(--weight-bold);
 }
+/* Header Actions */
+
+.header-actions{
+    display:flex;
+    align-items:center;
+    gap:16px;
+}
+
+.header-actions button{
+    width:42px;
+    height:42px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    border-radius:50%;
+
+    transition:var(--transition-fast);
+}
+
+.header-actions button:hover{
+    background:var(--parchment);
+}
+
+.header-actions img{
+    width:22px;
+    height:22px;
+}
