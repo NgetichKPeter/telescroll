@@ -1,1 +1,52 @@
-o
+/* ==========================================
+   Telescroll Responsive Styles
+========================================== */
+
+/* Tablets */
+
+@media (max-width: 768px) {
+
+    main {
+        padding: var(--space-md);
+    }
+
+    header {
+        padding: 0 var(--space-md);
+    }
+
+}
+
+/* Mobile */
+
+@media (max-width: 480px) {
+
+    :root {
+        --text-3xl: 32px;
+        --text-2xl: 26px;
+        --text-xl: 20px;
+    }
+
+    main {
+        padding: var(--space-sm);
+    }
+
+    .btn {
+        width: 100%;
+    }
+
+}
+
+/* Large Screens */
+
+@media (min-width: 1024px) {
+
+    body {
+        display: flex;
+        justify-content: center;
+    }
+
+    main {
+        width: var(--max-width);
+    }
+
+}
