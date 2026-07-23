@@ -284,3 +284,76 @@ textarea {
     color: var(--burgundy);
     font-weight: var(--weight-bold);
 }
+/* ==========================
+   Profile
+========================== */
+
+.profile-card {
+    text-align: center;
+    overflow: hidden;
+}
+
+.profile-cover {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: var(--radius-lg);
+}
+
+.profile-avatar {
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    object-fit: cover;
+
+    border: 4px solid var(--paper);
+
+    margin: -55px auto 16px;
+
+    background: var(--paper);
+}
+
+.profile-card h2 {
+    margin-bottom: 4px;
+    color: var(--ink);
+}
+
+.profile-card p {
+    margin-bottom: 10px;
+}
+
+.profile-bio {
+    color: var(--soft-ink);
+    max-width: 500px;
+    margin: 0 auto 16px;
+}
+
+.profile-stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+
+    margin: 24px 0;
+}
+
+.profile-stats div {
+    background: var(--parchment);
+    padding: 12px;
+    border-radius: var(--radius-md);
+}
+
+.profile-stats strong {
+    display: block;
+    font-size: var(--text-lg);
+    color: var(--burgundy);
+}
+
+.profile-stats span {
+    font-size: var(--text-sm);
+    color: var(--soft-ink);
+}
+
+.profile-card .btn {
+    width: 100%;
+    margin-top: 10px;
+}
