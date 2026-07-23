@@ -176,48 +176,7 @@ nav a.active {
 .composer-tools button:hover{
     background:var(--parchment);
 }
-/* Bottom Navigation */
 
-.bottom-nav{
-    position:fixed;
-    bottom:0;
-    left:0;
-
-    width:100%;
-    height:var(--bottom-nav-height);
-
-    background:var(--paper);
-    border-top:1px solid var(--border);
-
-    display:flex;
-    justify-content:space-around;
-    align-items:center;
-
-    z-index:1000;
-}
-
-.bottom-nav a{
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-    justify-content:center;
-    gap:4px;
-
-    color:var(--soft-ink);
-    font-size:var(--text-xs);
-
-    flex:1;
-}
-
-.bottom-nav a img{
-    width:22px;
-    height:22px;
-}
-
-.bottom-nav a.active{
-    color:var(--burgundy);
-    font-weight:var(--weight-bold);
-}
 /* Script Card */
 
 .script-card{
