@@ -2,7 +2,9 @@
    Telescroll Components
 ========================================== */
 
-/* Header */
+/* ==========================
+   Header
+========================== */
 
 header {
     height: var(--header-height);
@@ -27,7 +29,40 @@ header {
     color: var(--burgundy);
 }
 
-/* Buttons */
+/* ==========================
+   Header Actions
+========================== */
+
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.header-actions button {
+    width: 42px;
+    height: 42px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+    transition: var(--transition-fast);
+}
+
+.header-actions button:hover {
+    background: var(--parchment);
+}
+
+.header-actions img {
+    width: 22px;
+    height: 22px;
+}
+
+/* ==========================
+   Buttons
+========================== */
 
 .btn {
     display: inline-flex;
@@ -57,7 +92,9 @@ header {
     color: white;
 }
 
-/* Cards */
+/* ==========================
+   Cards
+========================== */
 
 .card {
     background: var(--paper);
@@ -68,7 +105,9 @@ header {
     margin-bottom: var(--space-lg);
 }
 
-/* Inputs */
+/* ==========================
+   Inputs
+========================== */
 
 .input,
 textarea {
@@ -80,9 +119,109 @@ textarea {
     color: var(--ink);
 }
 
-/* Bottom Navigation */
+/* ==========================
+   Script Composer
+========================== */
 
-nav {
+.script-composer {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.script-composer textarea {
+    resize: none;
+    min-height: 120px;
+}
+
+.composer-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.composer-tools {
+    display: flex;
+    gap: 12px;
+}
+
+.composer-tools button {
+    width: 42px;
+    height: 42px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+    transition: var(--transition-fast);
+}
+
+.composer-tools button:hover {
+    background: var(--parchment);
+}
+
+/* ==========================
+   Script Card
+========================== */
+
+.script-card {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.script-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    background: var(--border);
+}
+
+.script-header h3 {
+    font-size: var(--text-md);
+}
+
+.script-header small {
+    color: var(--soft-ink);
+}
+
+.script-content {
+    font-size: var(--text-md);
+    line-height: 1.6;
+}
+
+.script-actions {
+    display: flex;
+    justify-content: space-between;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.script-actions button {
+    padding: 8px 12px;
+    border-radius: var(--radius-full);
+    background: var(--parchment);
+    transition: var(--transition-fast);
+}
+
+.script-actions button:hover {
+    background: var(--gold);
+    color: #fff;
+}
+
+/* ==========================
+   Bottom Navigation
+========================== */
+
+.bottom-nav {
     position: fixed;
     bottom: 0;
     left: 0;
@@ -96,157 +235,52 @@ nav {
     display: flex;
     justify-content: space-around;
     align-items: center;
+
+    z-index: 1000;
 }
 
-nav a {
+.bottom-nav a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+
+    flex: 1;
+
     color: var(--soft-ink);
-    font-size: var(--text-sm);
+    font-size: var(--text-xs);
 }
 
-nav a.active {
+.bottom-nav a img {
+    width: 22px;
+    height: 22px;
+}
+
+.bottom-nav a.active {
     color: var(--burgundy);
     font-weight: var(--weight-bold);
 }
-/* Header Actions */
 
-.header-actions{
-    display:flex;
-    align-items:center;
-    gap:16px;
+/* ==========================
+   Authentication
+========================== */
+
+.auth-card {
+    max-width: 420px;
+    margin: 60px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
 
-.header-actions button{
-    width:42px;
-    height:42px;
-
-    display:flex;
-    align-items:center;
-    justify-content:center;
-
-    border-radius:50%;
-
-    transition:var(--transition-fast);
+.auth-card form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
 }
 
-.header-actions button:hover{
-    background:var(--parchment);
-}
-
-.header-actions img{
-    width:22px;
-    height:22px;
-}
-/* Script Composer */
-
-.script-composer{
-    display:flex;
-    flex-direction:column;
-    gap:16px;
-}
-
-.script-composer textarea{
-    resize:none;
-    min-height:120px;
-}
-
-.composer-actions{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-}
-
-.composer-tools{
-    display:flex;
-    gap:12px;
-}
-
-.composer-tools button{
-    width:42px;
-    height:42px;
-
-    display:flex;
-    align-items:center;
-    justify-content:center;
-
-    border-radius:50%;
-
-    transition:var(--transition-fast);
-}
-
-.composer-tools button:hover{
-    background:var(--parchment);
-}
-
-/* Script Card */
-
-.script-card{
-    display:flex;
-    flex-direction:column;
-    gap:16px;
-}
-
-.script-header{
-    display:flex;
-    align-items:center;
-    gap:12px;
-}
-
-.avatar{
-    width:50px;
-    height:50px;
-    border-radius:50%;
-    object-fit:cover;
-    background:var(--border);
-}
-
-.script-header h3{
-    font-size:var(--text-md);
-}
-
-.script-header small{
-    color:var(--soft-ink);
-}
-
-.script-content{
-    font-size:var(--text-md);
-    line-height:1.6;
-}
-
-.script-actions{
-    display:flex;
-    justify-content:space-between;
-    gap:8px;
-    flex-wrap:wrap;
-}
-
-.script-actions button{
-    padding:8px 12px;
-    border-radius:var(--radius-full);
-    background:var(--parchment);
-    transition:var(--transition-fast);
-}
-
-.script-actions button:hover{
-    background:var(--gold);
-    color:#fff;
-}
-/* Authentication */
-
-.auth-card{
-    max-width:420px;
-    margin:60px auto;
-    display:flex;
-    flex-direction:column;
-    gap:20px;
-}
-
-.auth-card form{
-    display:flex;
-    flex-direction:column;
-    gap:16px;
-}
-
-.auth-card p a{
-    color:var(--burgundy);
-    font-weight:var(--weight-bold);
+.auth-card p a {
+    color: var(--burgundy);
+    font-weight: var(--weight-bold);
 }
