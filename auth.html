@@ -1,1 +1,68 @@
-o
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Sign in to Telescroll">
+
+    <title>Telescroll • Authentication</title>
+
+    <link rel="icon" href="assets/logo/favicon.ico">
+
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+
+<body>
+
+<main>
+
+    <section class="card auth-card">
+
+        <div class="logo text-center">
+            📜 Telescroll
+        </div>
+
+        <p class="text-center">
+            Every Script Tells a Story.
+        </p>
+
+        <form>
+
+            <input
+                type="email"
+                class="input"
+                placeholder="Email Address"
+                required>
+
+            <input
+                type="password"
+                class="input"
+                placeholder="Password"
+                required>
+
+            <button class="btn btn-primary" type="submit">
+                Sign In
+            </button>
+
+        </form>
+
+        <p class="text-center">
+            Don't have an account?
+            <a href="#">Create Account</a>
+        </p>
+
+        <p class="text-center">
+            <a href="#">Forgot Password?</a>
+        </p>
+
+    </section>
+
+</main>
+
+<script type="module" src="js/auth.js"></script>
+
+</body>
+</html>
