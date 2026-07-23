@@ -1,1 +1,109 @@
-o
+/* ==========================================
+   Telescroll Components
+========================================== */
+
+/* Header */
+
+header {
+    height: var(--header-height);
+    background: var(--paper);
+    border-bottom: 1px solid var(--border);
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 var(--space-lg);
+
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-family: var(--font-heading);
+    font-size: var(--text-xl);
+    font-weight: var(--weight-bold);
+    color: var(--burgundy);
+}
+
+/* Buttons */
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 12px 18px;
+
+    border-radius: var(--radius-full);
+
+    font-weight: var(--weight-medium);
+
+    transition: var(--transition-normal);
+}
+
+.btn-primary {
+    background: var(--burgundy);
+    color: white;
+}
+
+.btn-primary:hover {
+    background: var(--burgundy-dark);
+}
+
+.btn-secondary {
+    background: var(--gold);
+    color: white;
+}
+
+/* Cards */
+
+.card {
+    background: var(--paper);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: var(--space-lg);
+    box-shadow: var(--shadow-sm);
+    margin-bottom: var(--space-lg);
+}
+
+/* Inputs */
+
+.input,
+textarea {
+    width: 100%;
+    background: var(--paper);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    padding: 14px;
+    color: var(--ink);
+}
+
+/* Bottom Navigation */
+
+nav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+
+    width: 100%;
+    height: var(--bottom-nav-height);
+
+    background: var(--paper);
+    border-top: 1px solid var(--border);
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+nav a {
+    color: var(--soft-ink);
+    font-size: var(--text-sm);
+}
+
+nav a.active {
+    color: var(--burgundy);
+    font-weight: var(--weight-bold);
+}
