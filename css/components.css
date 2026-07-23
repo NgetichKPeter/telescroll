@@ -271,3 +271,23 @@ nav a.active {
     background:var(--gold);
     color:#fff;
 }
+/* Authentication */
+
+.auth-card{
+    max-width:420px;
+    margin:60px auto;
+    display:flex;
+    flex-direction:column;
+    gap:20px;
+}
+
+.auth-card form{
+    display:flex;
+    flex-direction:column;
+    gap:16px;
+}
+
+.auth-card p a{
+    color:var(--burgundy);
+    font-weight:var(--weight-bold);
+}
