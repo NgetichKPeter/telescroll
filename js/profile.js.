@@ -1,0 +1,76 @@
+import { supabase } from "./config.js";
+
+async function loadProfile() {
+
+    const {
+        data: { user }
+    } = await supabase.auth.getUser();
+
+    if (!user) {
+        window.location.href = "auth.html";
+        return;
+    }
+
+    // Load profile
+    const { data: profile, error } = await supabase
+        .from("profiles")
+        .select("*")
+        .eq("id", user.id)
+        .single();
+
+    if (error) {
+        console.error(error);
+        return;
+    }
+
+    document.getElementById("profile-name").textContent =
+        profile.full_name;
+
+    document.getElementById("profile-username").textContent =
+        "@" + profile.username;
+
+    document.getElementById("profile-created").textContent =
+        "Scribing Since " +
+        new Date(profile.created_at).toLocaleDateString();
+
+    // Count Scripts
+    const { count: scriptCount } = await supabase
+        .from("scripts")
+        .select("*", { count: "exact", head: true })
+        .eq("scribe_id", user.id);
+
+    document.getElementById("script-count").textContent =
+        scriptCount ?? 0;
+
+    // Load Scripts
+    const { data: scripts } = await supabase
+        .from("scripts")
+        .select("*")
+        .eq("scribe_id", user.id)
+        .order("created_at", { ascending: false });
+
+    const feed = document.getElementById("profile-feed");
+
+    feed.innerHTML = "";
+
+    scripts.forEach(script => {
+
+        feed.innerHTML += `
+            <article class="card script-card">
+
+                <p class="script-content">
+                    ${script.content}
+                </p>
+
+                <small>
+                    ${new Date(script.created_at).toLocaleString()}
+                </small>
+
+            </article>
+        `;
+
+    });
+
+}
+
+loadProfile();
