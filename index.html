@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="css/responsive.css">
 </head>
 
-<body>
+<body id="top">
 
 <header>
 
@@ -25,15 +25,15 @@
 
     <div class="header-actions">
 
-        <button title="Search">
+        <button type="button" title="Search">
             <img src="assets/icons/search.svg" alt="Search" width="22">
         </button>
 
-        <button title="Notifications">
+        <button type="button" title="Notifications">
             <img src="assets/icons/notifications.svg" alt="Notifications" width="22">
         </button>
 
-        <button title="Profile">
+        <button type="button" title="Profile">
             <img src="assets/icons/profile.svg" alt="Profile" width="22">
         </button>
 
@@ -48,6 +48,7 @@
     <section class="card script-composer">
 
         <textarea
+            id="script-content"
             class="input"
             rows="4"
             maxlength="500"
@@ -57,17 +58,17 @@
 
             <div class="composer-tools">
 
-                <button title="Add Image">
+                <button type="button" title="Add Image">
                     <img src="assets/icons/image.svg" alt="Image" width="22">
                 </button>
 
-                <button title="Add Video">
+                <button type="button" title="Add Video">
                     <img src="assets/icons/video.svg" alt="Video" width="22">
                 </button>
 
             </div>
 
-            <button class="btn btn-primary">
+            <button id="post-script" class="btn btn-primary" type="button">
                 Post Script
             </button>
 
@@ -91,23 +92,23 @@
 
         <h3>Share Script</h3>
 
-        <button id="share-script" class="btn btn-secondary">
+        <button id="share-script" class="btn btn-secondary" type="button">
             📤 Share Script
         </button>
 
-        <button id="share-quote" class="btn btn-secondary">
+        <button id="share-quote" class="btn btn-secondary" type="button">
             ✍️ Share with Quote
         </button>
 
-        <button id="copy-link" class="btn btn-secondary">
+        <button id="copy-link" class="btn btn-secondary" type="button">
             🔗 Copy Link
         </button>
 
-        <button id="share-external" class="btn btn-secondary">
+        <button id="share-external" class="btn btn-secondary" type="button">
             🌍 Share Outside Telescroll
         </button>
 
-        <button id="close-share" class="btn btn-primary">
+        <button id="close-share" class="btn btn-primary" type="button">
             Cancel
         </button>
 
@@ -128,13 +129,11 @@
             maxlength="500"
             placeholder="Write your thoughts..."></textarea>
 
-        <div id="quoted-script">
-
-        </div>
+        <div id="quoted-script"></div>
 
         <br>
 
-        <button id="post-quote" class="btn btn-primary">
+        <button id="post-quote" class="btn btn-primary" type="button">
             Share with Quote
         </button>
 
@@ -156,7 +155,7 @@
         <span>Explore</span>
     </a>
 
-    <a href="index.html">
+    <a href="#top">
         <img src="assets/icons/write-script.svg" alt="Write Script" width="22">
         <span>Write</span>
     </a>
@@ -182,5 +181,6 @@
 <script type="module" src="js/scripts.js"></script>
 <script type="module" src="js/feed.js"></script>
 <script type="module" src="js/share.js"></script>
+
 </body>
 </html>
