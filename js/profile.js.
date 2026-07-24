@@ -1,20 +1,54 @@
-const {
-    data: { user }
-} = await supabase.auth.getUser();
+import { supabase } from "./config.js";
 
-console.log("User:", user);
+async function loadProfile() {
 
-if (!user) {
-    alert("No user logged in.");
-    window.location.href = "auth.html";
-    return;
+    const {
+        data: { user }
+    } = await supabase.auth.getUser();
+
+    if (!user) {
+        window.location.href = "auth.html";
+        return;
+    }
+
+    const { data: profile, error } = await supabase
+        .from("profiles")
+        .select("*")
+        .eq("id", user.id)
+        .single();
+
+    if (error || !profile) {
+        console.error(error);
+        return;
+    }
+
+    document.getElementById("profile-name").textContent =
+        profile.full_name || "Unknown Scribe";
+
+    document.getElementById("profile-username").textContent =
+        "@" + (profile.username || "unknown");
+
+    document.getElementById("profile-since").textContent =
+        "Scribing Since " +
+        new Date(profile.created_at).toLocaleDateString();
+
+    document.getElementById("scripts-count").textContent =
+        profile.scripts_count ?? 0;
+
+    document.getElementById("followers-count").textContent =
+        profile.followers_count ?? 0;
+
+    document.getElementById("following-count").textContent =
+        profile.following_count ?? 0;
+
+    document.getElementById("gold-count").textContent =
+        profile.gold_balance ?? 0;
+
+    if (profile.avatar_url) {
+        document.getElementById("profile-avatar").src =
+            profile.avatar_url;
+    }
+
 }
 
-const { data: profile, error } = await supabase
-    .from("profiles")
-    .select("*")
-    .eq("id", user.id)
-    .single();
-
-console.log("Profile:", profile);
-console.log("Error:", error);
+loadProfile();
