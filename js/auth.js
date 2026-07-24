@@ -1,8 +1,8 @@
 import { supabase } from "./config.js";
 
-// ===============================
+// -----------------------------
 // SIGN UP
-// ===============================
+// -----------------------------
 
 const signupForm = document.getElementById("signup-form");
 
@@ -23,9 +23,20 @@ if (signupForm) {
             return;
         }
 
-        const { data, error } = await supabase.auth.signUp({
+        const { error } = await supabase.auth.signUp({
+
             email,
-            password
+            password,
+
+            options: {
+
+                data: {
+                    full_name: fullName,
+                    username: username
+                }
+
+            }
+
         });
 
         if (error) {
@@ -33,35 +44,17 @@ if (signupForm) {
             return;
         }
 
-        if (!data.user) {
-            alert("Unable to create account.");
-            return;
-        }
-
-        const { error: profileError } = await supabase
-            .from("profiles")
-            .insert({
-                id: data.user.id,
-                full_name: fullName,
-                username: username
-            });
-
-        if (profileError) {
-            alert(profileError.message);
-            return;
-        }
-
         alert("Account created successfully!");
 
-        window.location.href = "index.html";
+        window.location.href = "auth.html";
 
     });
 
 }
 
-// ===============================
+// -----------------------------
 // LOGIN
-// ===============================
+// -----------------------------
 
 const loginForm = document.getElementById("login-form");
 
@@ -75,8 +68,10 @@ if (loginForm) {
         const password = document.getElementById("password").value;
 
         const { error } = await supabase.auth.signInWithPassword({
+
             email,
             password
+
         });
 
         if (error) {
