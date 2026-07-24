@@ -1,16 +1,16 @@
 import { supabase } from "./config.js";
 
-const postButton = document.querySelector(".btn-primary");
-const textarea = document.querySelector(".script-composer textarea");
+const postButton = document.getElementById("post-script");
+const scriptInput = document.getElementById("script-content");
 
-if (postButton && textarea) {
+if (postButton) {
 
     postButton.addEventListener("click", async () => {
 
-        const content = textarea.value.trim();
+        const content = scriptInput.value.trim();
 
         if (!content) {
-            alert("Write your Script first.");
+            alert("Write a Script first.");
             return;
         }
 
@@ -36,9 +36,9 @@ if (postButton && textarea) {
             return;
         }
 
-        alert("Script published successfully!");
+        scriptInput.value = "";
 
-        textarea.value = "";
+        alert("Script posted successfully!");
 
         location.reload();
 
