@@ -1,9 +1,90 @@
-<!-- Feed -->
-<section class="feed" id="feed">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Telescroll - Every Script Tells a Story">
 
-</section>
+    <title>Telescroll</title>
+
+    <link rel="icon" href="assets/logo/favicon.ico">
+
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+
+<body>
+
+<header>
+
+    <div class="logo">
+        📜 Telescroll
+    </div>
+
+    <div class="header-actions">
+
+        <button title="Search">
+            <img src="assets/icons/search.svg" alt="Search" width="22">
+        </button>
+
+        <button title="Notifications">
+            <img src="assets/icons/notifications.svg" alt="Notifications" width="22">
+        </button>
+
+        <button title="Profile">
+            <img src="assets/icons/profile.svg" alt="Profile" width="22">
+        </button>
+
+    </div>
+
+</header>
+
+<main>
+
+    <!-- Script Composer -->
+
+    <section class="card script-composer">
+
+        <textarea
+            class="input"
+            rows="4"
+            maxlength="500"
+            placeholder="Write your Script here..."></textarea>
+
+        <div class="composer-actions">
+
+            <div class="composer-tools">
+
+                <button title="Add Image">
+                    <img src="assets/icons/image.svg" alt="Image" width="22">
+                </button>
+
+                <button title="Add Video">
+                    <img src="assets/icons/video.svg" alt="Video" width="22">
+                </button>
+
+            </div>
+
+            <button class="btn btn-primary">
+                Post Script
+            </button>
+
+        </div>
+
+    </section>
+
+    <!-- Feed -->
+
+    <section class="feed" id="feed">
+
+    </section>
+
+</main>
 
 <!-- Share Menu -->
+
 <div id="share-menu" class="hidden">
 
     <div class="card">
@@ -35,6 +116,7 @@
 </div>
 
 <!-- Quote Composer -->
+
 <div id="quote-composer" class="hidden">
 
     <section class="card">
@@ -48,8 +130,6 @@
 
         <div id="quoted-script">
 
-            <!-- Original Script appears here -->
-
         </div>
 
         <br>
@@ -61,3 +141,46 @@
     </section>
 
 </div>
+
+<!-- Bottom Navigation -->
+
+<nav class="bottom-nav">
+
+    <a href="index.html" class="active">
+        <img src="assets/icons/archive.svg" alt="Feed" width="22">
+        <span>Feed</span>
+    </a>
+
+    <a href="explore.html">
+        <img src="assets/icons/explore.svg" alt="Explore" width="22">
+        <span>Explore</span>
+    </a>
+
+    <a href="index.html">
+        <img src="assets/icons/write-script.svg" alt="Write Script" width="22">
+        <span>Write</span>
+    </a>
+
+    <a href="notifications.html">
+        <img src="assets/icons/notifications.svg" alt="Alerts" width="22">
+        <span>Alerts</span>
+    </a>
+
+    <a href="messages.html">
+        <img src="assets/icons/messages.svg" alt="Messages" width="22">
+        <span>Messages</span>
+    </a>
+
+    <a href="profile.html">
+        <img src="assets/icons/profile.svg" alt="Profile" width="22">
+        <span>Profile</span>
+    </a>
+
+</nav>
+
+<script type="module" src="js/app.js"></script>
+<script type="module" src="js/scripts.js"></script>
+<script type="module" src="js/feed.js"></script>
+
+</body>
+</html>
