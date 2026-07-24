@@ -101,8 +101,11 @@ async function loadFeed() {
 
             <div class="script-actions">
 
-                <button class="like-btn">
-                    ❤️ Like
+                <button
+    class="like-btn"
+    data-id="${script.id}">
+    ❤️ Like (${script.likes_count})
+</button>
                 </button>
 
                 <button
