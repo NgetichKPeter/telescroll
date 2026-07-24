@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="css/responsive.css">
 </head>
 
-<body id="top">
+<body>
 
 <header>
 
@@ -25,16 +25,16 @@
 
     <div class="header-actions">
 
-        <button type="button" title="Search">
-            <img src="assets/icons/search.svg" alt="Search" width="22">
+        <button title="Search">
+            <img src="assets/icons/search.svg" alt="Search">
         </button>
 
-        <button type="button" title="Notifications">
-            <img src="assets/icons/notifications.svg" alt="Notifications" width="22">
+        <button title="Notifications">
+            <img src="assets/icons/notifications.svg" alt="Notifications">
         </button>
 
-        <button type="button" title="Profile">
-            <img src="assets/icons/profile.svg" alt="Profile" width="22">
+        <button onclick="window.location.href='profile.html'" title="Profile">
+            <img src="assets/icons/profile.svg" alt="Profile">
         </button>
 
     </div>
@@ -42,8 +42,6 @@
 </header>
 
 <main>
-
-    <!-- Script Composer -->
 
     <section class="card script-composer">
 
@@ -58,17 +56,19 @@
 
             <div class="composer-tools">
 
-                <button type="button" title="Add Image">
-                    <img src="assets/icons/image.svg" alt="Image" width="22">
+                <button>
+                    <img src="assets/icons/image.svg" alt="Image">
                 </button>
 
-                <button type="button" title="Add Video">
-                    <img src="assets/icons/video.svg" alt="Video" width="22">
+                <button>
+                    <img src="assets/icons/video.svg" alt="Video">
                 </button>
 
             </div>
 
-            <button id="post-script" class="btn btn-primary" type="button">
+            <button
+                id="post-script"
+                class="btn btn-primary">
                 Post Script
             </button>
 
@@ -76,113 +76,61 @@
 
     </section>
 
-    <!-- Feed -->
+    <section
+        id="feed"
+        class="feed">
 
-    <section class="feed" id="feed">
+        <article class="card">
+
+            <h2>No Scripts Yet 📜</h2>
+
+            <p>Be the first Scribe to tell a story.</p>
+
+        </article>
 
     </section>
 
 </main>
 
-<!-- Share Menu -->
-
-<div id="share-menu" class="hidden">
-
-    <div class="card">
-
-        <h3>Share Script</h3>
-
-        <button id="share-script" class="btn btn-secondary" type="button">
-            📤 Share Script
-        </button>
-
-        <button id="share-quote" class="btn btn-secondary" type="button">
-            ✍️ Share with Quote
-        </button>
-
-        <button id="copy-link" class="btn btn-secondary" type="button">
-            🔗 Copy Link
-        </button>
-
-        <button id="share-external" class="btn btn-secondary" type="button">
-            🌍 Share Outside Telescroll
-        </button>
-
-        <button id="close-share" class="btn btn-primary" type="button">
-            Cancel
-        </button>
-
-    </div>
-
-</div>
-
-<!-- Quote Composer -->
-
-<div id="quote-composer" class="hidden">
-
-    <section class="card">
-
-        <textarea
-            id="quote-text"
-            class="input"
-            rows="4"
-            maxlength="500"
-            placeholder="Write your thoughts..."></textarea>
-
-        <div id="quoted-script"></div>
-
-        <br>
-
-        <button id="post-quote" class="btn btn-primary" type="button">
-            Share with Quote
-        </button>
-
-    </section>
-
-</div>
-
-<!-- Bottom Navigation -->
-
 <nav class="bottom-nav">
 
     <a href="index.html" class="active">
-        <img src="assets/icons/archive.svg" alt="Feed" width="22">
+        <img src="assets/icons/archive.svg" alt="Feed">
         <span>Feed</span>
     </a>
 
     <a href="explore.html">
-        <img src="assets/icons/explore.svg" alt="Explore" width="22">
+        <img src="assets/icons/explore.svg" alt="Explore">
         <span>Explore</span>
     </a>
 
-    <a href="#top">
-        <img src="assets/icons/write-script.svg" alt="Write Script" width="22">
+    <a href="#">
+        <img src="assets/icons/write-script.svg" alt="Write">
         <span>Write</span>
     </a>
 
     <a href="notifications.html">
-        <img src="assets/icons/notifications.svg" alt="Alerts" width="22">
+        <img src="assets/icons/notifications.svg" alt="Alerts">
         <span>Alerts</span>
     </a>
 
     <a href="messages.html">
-        <img src="assets/icons/messages.svg" alt="Messages" width="22">
+        <img src="assets/icons/messages.svg" alt="Messages">
         <span>Messages</span>
     </a>
 
     <a href="profile.html">
-        <img src="assets/icons/profile.svg" alt="Profile" width="22">
+        <img src="assets/icons/profile.svg" alt="Profile">
         <span>Profile</span>
     </a>
 
 </nav>
 
+<script type="module" src="js/config.js"></script>
 <script type="module" src="js/app.js"></script>
 <script type="module" src="js/scripts.js"></script>
 <script type="module" src="js/feed.js"></script>
 <script type="module" src="js/share.js"></script>
-<script type="module" src="js/comments.js"></script>
-<script type="module" src="js/likes.js"></script>
 
 </body>
 </html>
