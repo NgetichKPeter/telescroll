@@ -1,160 +1,63 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Telescroll - Every Script Tells a Story">
-
-    <title>Telescroll</title>
-
-    <link rel="icon" href="assets/logo/favicon.ico">
-
-    <link rel="stylesheet" href="css/variables.css">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/components.css">
-    <link rel="stylesheet" href="css/responsive.css">
-</head>
-
-<body>
-
-    <!-- Header -->
-    <header>
-
-        <div class="logo">
-            📜 Telescroll
-        </div>
-
-        <div class="header-actions">
-
-            <button title="Search">
-                <img src="assets/icons/search.svg" alt="Search" width="22">
-            </button>
-
-            <button title="Notifications">
-                <img src="assets/icons/notifications.svg" alt="Notifications" width="22">
-            </button>
-
-            <button title="Profile">
-                <img src="assets/icons/profile.svg" alt="Profile" width="22">
-            </button>
-
-        </div>
-
-    </header>
-
-    <!-- Main Content -->
-    <main>
-
-        <!-- Script Composer -->
-        <section class="card script-composer">
-
-            <textarea
-    class="input"
-    rows="4"
-    placeholder="Write your Script here..."
-    maxlength="500"></textarea>
-
-            <div class="composer-actions">
-
-                <div class="composer-tools">
-
-                    <button title="Add Image">
-                        <img src="assets/icons/image.svg" alt="Image" width="22">
-                    </button>
-
-                    <button title="Add Video">
-                        <img src="assets/icons/video.svg" alt="Video" width="22">
-                    </button>
-
-                </div>
-
-                <button class="btn btn-primary">
-                    Post Script
-                </button>
-
-            </div>
-
-        </section>
-
-       <!-- Feed -->
-<section class="feed">
-
-    <article class="card script-card">
-
-        <div class="script-header">
-
-            <img src="assets/images/default-avatar.png"
-                 alt="Profile"
-                 class="avatar">
-
-            <div>
-
-                <h3>Ngetich K Peter</h3>
-
-                <small>@ngetichkpeter · Scribing Since Today</small>
-
-            </div>
-
-        </div>
-
-        <p class="script-content">
-            Welcome to Telescroll! Every Script tells a story. 📜
-        </p>
-
-        <div class="script-actions">
-
-            <button>❤️ Like</button>
-
-            <button>💬 Comment</button>
-
-            <button>📤 Share</button>
-
-            <button>🪙 Bestow Gold</button>
-
-        </div>
-
-    </article>
+<!-- Feed -->
+<section class="feed" id="feed">
 
 </section>
 
-     </main>
+<!-- Share Menu -->
+<div id="share-menu" class="hidden">
 
-    <!-- Bottom Navigation -->
-<nav class="bottom-nav">
+    <div class="card">
 
-    <a href="index.html" class="active">
-        <img src="assets/icons/archive.svg" alt="Feed" width="22">
-        <span>Feed</span>
-    </a>
+        <h3>Share Script</h3>
 
-    <a href="explore.html">
-        <img src="assets/icons/explore.svg" alt="Explore" width="22">
-        <span>Explore</span>
-    </a>
+        <button id="share-script" class="btn btn-secondary">
+            📤 Share Script
+        </button>
 
-   <a href="index.html">
-        <img src="assets/icons/write-script.svg" alt="Write Script" width="22">
-        <span>Write</span>
-    </a>
+        <button id="share-quote" class="btn btn-secondary">
+            ✍️ Share with Quote
+        </button>
 
-    <a href="notifications.html">
-        <img src="assets/icons/notifications.svg" alt="Notifications" width="22">
-        <span>Alerts</span>
-    </a>
+        <button id="copy-link" class="btn btn-secondary">
+            🔗 Copy Link
+        </button>
 
-    <a href="messages.html">
-        <img src="assets/icons/messages.svg" alt="Messages" width="22">
-        <span>Messages</span>
-    </a>
+        <button id="share-external" class="btn btn-secondary">
+            🌍 Share Outside Telescroll
+        </button>
 
-    <a href="profile.html">
-        <img src="assets/icons/profile.svg" alt="Profile" width="22">
-        <span>Profile</span>
-    </a>
+        <button id="close-share" class="btn btn-primary">
+            Cancel
+        </button>
 
-</nav>
+    </div>
 
-    <script type="module" src="js/app.js"></script>
-<script type="module" src="js/scripts.js"></script>
-</body>
-</html>
+</div>
+
+<!-- Quote Composer -->
+<div id="quote-composer" class="hidden">
+
+    <section class="card">
+
+        <textarea
+            id="quote-text"
+            class="input"
+            rows="4"
+            maxlength="500"
+            placeholder="Write your thoughts..."></textarea>
+
+        <div id="quoted-script">
+
+            <!-- Original Script appears here -->
+
+        </div>
+
+        <br>
+
+        <button id="post-quote" class="btn btn-primary">
+            Share with Quote
+        </button>
+
+    </section>
+
+</div>
