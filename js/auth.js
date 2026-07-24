@@ -15,7 +15,14 @@ if (signupForm) {
         const email = document.getElementById("email").value;
         const password = document.getElementById("password").value;
 
-        const { data, error } = await supabase.auth.signUp({
+        const { data, error } = await
+const confirmPassword = document.getElementById("confirm-password").value;
+
+if (password !== confirmPassword) {
+    alert("Passwords do not match.");
+    return;
+}
+ supabase.auth.signUp({
             email,
             password
         });
