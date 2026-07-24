@@ -1,11 +1,10 @@
 import { supabase } from "./config.js";
 
-const signupForm = document.getElementById("signup-form");
-const loginForm = document.getElementById("login-form");
+// ===============================
+// SIGN UP
+// ===============================
 
-// ========================
-// Sign Up
-// ========================
+const signupForm = document.getElementById("signup-form");
 
 if (signupForm) {
 
@@ -14,7 +13,7 @@ if (signupForm) {
         e.preventDefault();
 
         const fullName = document.getElementById("full-name").value.trim();
-        const username = document.getElementById("username").value.trim();
+        const username = document.getElementById("username").value.trim().toLowerCase();
         const email = document.getElementById("email").value.trim();
         const password = document.getElementById("password").value;
         const confirmPassword = document.getElementById("confirm-password").value;
@@ -34,6 +33,11 @@ if (signupForm) {
             return;
         }
 
+        if (!data.user) {
+            alert("Unable to create account.");
+            return;
+        }
+
         const { error: profileError } = await supabase
             .from("profiles")
             .insert({
@@ -47,17 +51,19 @@ if (signupForm) {
             return;
         }
 
-        alert("Account created successfully! Please check your email to verify your account.");
+        alert("Account created successfully!");
 
-        window.location.href = "auth.html";
+        window.location.href = "index.html";
 
     });
 
 }
 
-// ========================
-// Login
-// ========================
+// ===============================
+// LOGIN
+// ===============================
+
+const loginForm = document.getElementById("login-form");
 
 if (loginForm) {
 
@@ -77,8 +83,6 @@ if (loginForm) {
             alert(error.message);
             return;
         }
-
-        alert("Welcome back!");
 
         window.location.href = "index.html";
 
