@@ -23,6 +23,8 @@
 
 <main>
 
+    <!-- Profile -->
+
     <section class="card">
 
         <div style="text-align:center;">
@@ -30,6 +32,7 @@
             <img
                 id="profile-avatar"
                 src="assets/images/default-avatar.png"
+                alt="Avatar"
                 class="avatar"
                 style="width:100px;height:100px;">
 
@@ -41,7 +44,7 @@
                 @loading
             </p>
 
-            <p id="profile-created">
+            <p id="profile-since">
                 Scribing Since...
             </p>
 
@@ -49,21 +52,39 @@
 
     </section>
 
+    <!-- Statistics -->
+
     <section class="card">
 
         <h3>Statistics</h3>
 
-        <p>Scripts: <span id="script-count">0</span></p>
+        <p>
+            📜 Scripts:
+            <span id="scripts-count">0</span>
+        </p>
 
-        <p>Followers: <span id="followers-count">0</span></p>
+        <p>
+            👥 Followers:
+            <span id="followers-count">0</span>
+        </p>
 
-        <p>Following: <span id="following-count">0</span></p>
+        <p>
+            ➡️ Following:
+            <span id="following-count">0</span>
+        </p>
 
-        <p>Gold Received: <span id="gold-count">0</span></p>
+        <p>
+            🪙 Gold Received:
+            <span id="gold-count">0</span>
+        </p>
 
     </section>
 
-    <section id="profile-feed" class="feed">
+    <!-- User Scripts -->
+
+    <section
+        id="profile-feed"
+        class="feed">
 
     </section>
 
