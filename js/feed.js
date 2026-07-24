@@ -19,6 +19,21 @@ async function loadFeed() {
 
     if (error) {
         console.error(error);
+        feed.innerHTML = `
+            <div class="card">
+                <p>Unable to load Scripts.</p>
+            </div>
+        `;
+        return;
+    }
+
+    if (!data.length) {
+        feed.innerHTML = `
+            <div class="card">
+                <h3>No Scripts yet 📜</h3>
+                <p>Be the first Scribe to tell a story.</p>
+            </div>
+        `;
         return;
     }
 
@@ -34,11 +49,14 @@ async function loadFeed() {
                     <img
                         src="assets/images/default-avatar.png"
                         class="avatar"
-                        alt="Profile">
+                        alt="Avatar">
 
                     <div>
+
                         <h3>${script.profiles?.full_name ?? "Unknown Scribe"}</h3>
+
                         <small>@${script.profiles?.username ?? "unknown"}</small>
+
                     </div>
 
                 </div>
@@ -49,18 +67,27 @@ async function loadFeed() {
 
                 <div class="script-actions">
 
-                    <button>❤️ Like (${script.likes_count})</button>
+                    <button class="like-btn">
+                        ❤️ Like (${script.likes_count})
+                    </button>
 
-                    <button>💬 Comment (${script.comments_count})</button>
+                    <button class="comment-btn">
+                        💬 Comment (${script.comments_count})
+                    </button>
 
-                    <button>📤 Share (${script.shares_count})</button>
+                    <button class="share-btn" data-id="${script.id}">
+                        📤 Share (${script.shares_count})
+                    </button>
 
-                    <button>🪙 Bestow Gold (${script.gold_received})</button>
+                    <button class="gold-btn">
+                        🪙 Bestow Gold (${script.gold_received})
+                    </button>
 
                 </div>
 
             </article>
         `;
+
     });
 
 }
