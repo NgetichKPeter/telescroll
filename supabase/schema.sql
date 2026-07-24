@@ -175,3 +175,51 @@ create table if not exists public.messages (
     created_at timestamptz default now()
 
 );
+-- ==========================================
+-- Likes Counter
+-- ==========================================
+
+create or replace function public.increment_likes_count()
+returns trigger
+language plpgsql
+as $$
+begin
+
+    update public.scripts
+    set likes_count = likes_count + 1
+    where id = new.script_id;
+
+    return new;
+
+end;
+$$;
+
+drop trigger if exists like_created on public.likes;
+
+create trigger like_created
+after insert on public.likes
+for each row
+execute function public.increment_likes_count();
+
+
+create or replace function public.decrement_likes_count()
+returns trigger
+language plpgsql
+as $$
+begin
+
+    update public.scripts
+    set likes_count = greatest(likes_count - 1, 0)
+    where id = old.script_id;
+
+    return old;
+
+end;
+$$;
+
+drop trigger if exists like_deleted on public.likes;
+
+create trigger like_deleted
+after delete on public.likes
+for each row
+execute function public.decrement_likes_count();
