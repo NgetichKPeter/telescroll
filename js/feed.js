@@ -105,9 +105,11 @@ async function loadFeed() {
                     ❤️ Like
                 </button>
 
-                <button class="comment-btn">
-                    💬 Comment
-                </button>
+                <button
+    class="comment-btn"
+    data-id="${script.id}">
+    💬 Comment (${script.comments_count})
+</button>
 
                 <button
                     class="share-btn"
